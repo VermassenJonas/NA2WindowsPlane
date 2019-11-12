@@ -2,13 +2,90 @@
     x:Class="ProjectWindowsVliegtuig.Pages.FlightInfo"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ProjectWindowsVliegtuig.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ProjectWindowsVliegtuig.Pages"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
 
-    <Grid>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <Grid x:Name="FlightGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <maps:MapControl
+                x:Name="FlightMap"
+                Grid.Row="0"
+                Grid.ColumnSpan="5"
+                MapServiceToken="hMRJ0LS1PplRK00CEMPz~IM7t7oFO4KF0FpOIXcnsiA~AobMLDXdVA9Dxf8m0sREqlnDfoHQa3xovTJRpiwz5JOc4fkSriuVHNolF5GBklZQ" />
 
-    </Grid>
+            <TextBlock
+                x:Name="StartTitle"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                Text="Start" />
+            <TextBlock
+                x:Name="StartLocation"
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Start location:" />
+            <TextBlock
+                x:Name="StartLocationTxt"
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="Belgium" />
+            <TextBlock
+                x:Name="StartTime"
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="Start time:" />
+            <TextBlock
+                x:Name="StartTimeTxt"
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="10:00" />
+
+            <TextBlock
+                x:Name="DestinationTitle"
+                Grid.Row="1"
+                Grid.Column="2"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                Text="Destination" />
+            <TextBlock
+                x:Name="DestinationLocation"
+                Grid.Row="2"
+                Grid.Column="2"
+                Text="Destination location:" />
+            <TextBlock
+                x:Name="DestinationLocationTxt"
+                Grid.Row="2"
+                Grid.Column="3"
+                Text="America" />
+            <TextBlock
+                x:Name="DestinationTime"
+                Grid.Row="3"
+                Grid.Column="2"
+                Text="Destination time:" />
+            <TextBlock
+                x:Name="DestinationTimeTxt"
+                Grid.Row="3"
+                Grid.Column="3"
+                Text="15:00" />
+        </Grid>
+    </ScrollViewer>
 </Page>
