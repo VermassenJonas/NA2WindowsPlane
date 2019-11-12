@@ -5,11 +5,9 @@ using System.Web;
 
 namespace Backend.Models.Domain
 {
-    public class Message
+    public class Notification
     {
-        public int MessageId { get; set; }
         public String Content { get; set; }
-        public DateTime Sent { get; set; }
-        public Passenger Sender { get; set; }
+        public List<Passenger> Recipients { get; set; }
     }
 }
