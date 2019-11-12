@@ -26,5 +26,25 @@ namespace ProjectWindowsVliegtuig
         {
             this.InitializeComponent();
         }
+
+        private void NavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            NavigationViewItem x = (NavigationViewItem)args.SelectedItem;
+            switch (x.Tag)
+            {
+                case "flightinfo":
+                    mainFrame.Navigate(typeof(Pages.FlightInfo));
+                    break;
+                case "foodorders":
+                    mainFrame.Navigate(typeof(Pages.FoodOrders));
+                    break;
+                case "chatroom":
+                    mainFrame.Navigate(typeof(Pages.Chatroom));
+                    break;
+                case "movies":
+                    mainFrame.Navigate(typeof(Pages.Movies));
+                    break;
+            }
+        }
     }
 }
