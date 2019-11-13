@@ -86,6 +86,13 @@
                 Grid.Row="3"
                 Grid.Column="3"
                 Text="15:00" />
+
+            <TextBlock
+                x:Name="Weather"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="5"
+                Text="It's INT°C in Destination and clear weather" />
         </Grid>
     </ScrollViewer>
 </Page>

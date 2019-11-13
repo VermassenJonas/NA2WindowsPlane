@@ -119,6 +119,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\BoolToVisibilityConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -128,11 +129,14 @@
     <Compile Include="Pages\FlightInfo.xaml.cs">
       <DependentUpon>FlightInfo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\FoodOrders.xaml.cs">
-      <DependentUpon>FoodOrders.xaml</DependentUpon>
+    <Compile Include="Pages\OrderFood.xaml.cs">
+      <DependentUpon>OrderFood.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Movies.xaml.cs">
       <DependentUpon>Movies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MyOrders.xaml.cs">
+      <DependentUpon>MyOrders.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -169,11 +173,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\FoodOrders.xaml">
+    <Page Include="Pages\OrderFood.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Movies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MyOrders.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,6 +191,7 @@
       <Version>6.2.8</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -26,5 +26,8 @@ namespace ProjectWindowsVliegtuig.Pages
         {
             this.InitializeComponent();
         }
+        /*
+         Zouden wij dit kunnen gebruiken? https://uwpx.org/ 
+         */
     }
 }
