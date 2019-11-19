@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 
-namespace ProjectWindowsVliegtuig.Converter
+namespace ProjectWindowsVliegtuig.Util
 {
     public class BoolToVisibilityConverter : IValueConverter
     {
