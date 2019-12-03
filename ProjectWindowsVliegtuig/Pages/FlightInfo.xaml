@@ -42,21 +42,27 @@
                 x:Name="StartLocation"
                 Grid.Row="2"
                 Grid.Column="0"
+                Padding="15,0,15,0"
                 Text="Start location:" />
             <TextBlock
                 x:Name="StartLocationTxt"
                 Grid.Row="2"
                 Grid.Column="1"
+                Padding="15,0,15,0"
+                HorizontalAlignment="Left"
                 Text="Belgium" />
             <TextBlock
                 x:Name="StartTime"
                 Grid.Row="3"
                 Grid.Column="0"
+                Padding="15,0,15,0"
                 Text="Start time:" />
             <TextBlock
                 x:Name="StartTimeTxt"
                 Grid.Row="3"
                 Grid.Column="1"
+                Padding="15,0,15,0"
+                HorizontalAlignment="Left"
                 Text="10:00" />
 
             <TextBlock
@@ -70,21 +76,27 @@
                 x:Name="DestinationLocation"
                 Grid.Row="2"
                 Grid.Column="2"
+                Padding="15,0,15,0"
                 Text="Destination location:" />
             <TextBlock
                 x:Name="DestinationLocationTxt"
                 Grid.Row="2"
                 Grid.Column="3"
+                Padding="15,0,15,0"
+                HorizontalAlignment="Left"
                 Text="America" />
             <TextBlock
                 x:Name="DestinationTime"
                 Grid.Row="3"
                 Grid.Column="2"
+                Padding="15,0,15,0"
                 Text="Destination time:" />
             <TextBlock
                 x:Name="DestinationTimeTxt"
                 Grid.Row="3"
                 Grid.Column="3"
+                Padding="15,0,15,0"
+                HorizontalAlignment="Left"
                 Text="15:00" />
 
             <TextBlock

@@ -8,5 +8,81 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
-    <Grid />
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock
+            Grid.Column="0"
+            Margin="20"
+            FontSize="35"
+            Text="Products" />
+        <FontIcon
+            Grid.Column="1"
+            Margin="20"
+            FontSize="35"
+            Glyph="&#xE7BF;" />
+        <!--  The GridView used for this sample is shown below, with all of the necessary added properties.  -->
+        <GridView
+            x:Name="ContentGridView"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            AllowDrop="False"
+            CanDragItems="False"
+            CanReorderItems="False"
+            FlowDirection="LeftToRight"
+            IsItemClickEnabled="False"
+            ItemsSource="{Binding}"
+            SelectionChanged="ContentGridView_SelectionChanged"
+            SelectionMode="Single">
+            <GridView.ItemTemplate>
+                <!--
+                    ContentGridView_SelectionChanged and ContentGridView_ItemClick are functions defined in the code-behind
+                    to handle the events of when a selection changes on the GridView and when an item is clicked.
+                -->
+
+                <!--
+                    The data template bound to this GridView's ItemTemplate property is based on which one you
+                    select from the options on the right. The currently selected DataTemplate is:
+                -->
+
+                <!--  ImageTextTemplate: x:Key='ProductsTemplate' x:DataType='local:Products'  -->
+
+                <DataTemplate x:Uid="ProductsTemplate">
+                    <Grid Width="280" AutomationProperties.Name="{x:Bind Title}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="8,0,0,8">
+                            <TextBlock
+                                Margin="0,0,0,8"
+                                Style="{ThemeResource SubtitleTextBlockStyle}"
+                                Text="{x:Bind Title}" />
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text=" Prijs: " />
+                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="{x:Bind Prijs}" />
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel
+                            Grid.Column="1"
+                            Margin="8,0,8,0"
+                            Orientation="Vertical">
+                            <Button Click="Add_Product">
+                                <FontIcon Glyph="&#xE710;" />
+                            </Button>
+                            <Button Click="Remove_Product">
+                                <FontIcon Glyph="&#xE738;" />
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
 </Page>

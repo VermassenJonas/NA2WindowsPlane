@@ -26,5 +26,15 @@ namespace ProjectWindowsVliegtuig.Pages
         {
             this.InitializeComponent();
         }
+
+        private void Add_Product(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Remove_Product(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
