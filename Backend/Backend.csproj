@@ -7,7 +7,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion />
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0ED3E9FE-15AE-45E5-A15D-75FBC4D053A2}</ProjectGuid>
+    <ProjectGuid>{B7A8338E-BB72-4E69-B8C6-C5BD5DA0FB22}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -108,10 +108,17 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ArticlesController.cs" />
+    <Compile Include="Controllers\FlightsController.cs" />
+    <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="Controllers\NotificationsController.cs" />
+    <Compile Include="Controllers\OrderLinesController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\PassengersController.cs" />
+    <Compile Include="Controllers\SeatsController.cs" />
     <Compile Include="Controllers\StewardsController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\TravelGroupsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -122,6 +129,10 @@
     <Compile Include="Migrations\201911121436198_Initial1.cs" />
     <Compile Include="Migrations\201911121436198_Initial1.Designer.cs">
       <DependentUpon>201911121436198_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912031324291_controllersAdded.cs" />
+    <Compile Include="Migrations\201912031324291_controllersAdded.Designer.cs">
+      <DependentUpon>201912031324291_controllersAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BackendContext.cs" />
@@ -153,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911121436198_Initial1.resx">
       <DependentUpon>201911121436198_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912031324291_controllersAdded.resx">
+      <DependentUpon>201912031324291_controllersAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

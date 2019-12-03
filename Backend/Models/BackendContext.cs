@@ -24,5 +24,21 @@ namespace Backend.Models
         public System.Data.Entity.DbSet<Backend.Models.Domain.Order> Orders { get; set; }
 
         public System.Data.Entity.DbSet<Backend.Models.Domain.Steward> Stewards { get; set; }
+
+        public System.Data.Entity.DbSet<Backend.Models.Domain.Article> Articles { get; set; }
+
+        public System.Data.Entity.DbSet<Backend.Models.Domain.Flight> Flights { get; set; }
+
+        public System.Data.Entity.DbSet<Backend.Models.Domain.Medium> Media { get; set; }
+
+        public System.Data.Entity.DbSet<Backend.Models.Domain.Message> Messages { get; set; }
+
+        public System.Data.Entity.DbSet<Backend.Models.Domain.Notification> Notifications { get; set; }
+
+        public System.Data.Entity.DbSet<Backend.Models.Domain.OrderLine> OrderLines { get; set; }
+
+        public System.Data.Entity.DbSet<Backend.Models.Domain.Seat> Seats { get; set; }
+
+        public System.Data.Entity.DbSet<Backend.Models.Domain.TravelGroup> TravelGroups { get; set; }
     }
 }
