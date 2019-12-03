@@ -41,9 +41,6 @@ namespace ProjectWindowsVliegtuig
                 case "chatroom":
                     mainFrame.Navigate(typeof(Pages.Chatroom));
                     break;
-                case "movies":
-                    mainFrame.Navigate(typeof(Pages.Movies));
-                    break;
             }
         }
     }
