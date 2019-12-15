@@ -1,0 +1,35 @@
+﻿<UserControl
+    x:Class="ProjectWindowsVliegtuig.View.ProductsBanner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ProjectWindowsVliegtuig.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="75"
+    d:DesignWidth="1280"
+    mc:Ignorable="d">
+
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                Grid.Column="0"
+                FontSize="25"
+                Tapped="LogoTapped"
+                Text="Products" />
+            <local:ShoppingCartIcon
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
+        </Grid>
+        <Rectangle
+            Height="2"
+            Margin="0,8,0,8"
+            Fill="#3F000000"
+            RadiusX="2"
+            RadiusY="2" />
+    </StackPanel>
+</UserControl>

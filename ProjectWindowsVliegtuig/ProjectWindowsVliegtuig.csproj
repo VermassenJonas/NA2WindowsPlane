@@ -119,6 +119,19 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\AppState.cs" />
+    <Compile Include="Model\Article.cs" />
+    <Compile Include="Model\ShoppingCart.cs" />
+    <Compile Include="Model\ShoppingCartChangedEventArgs.cs" />
+    <Compile Include="Util\PriceStringUtilities.cs" />
+    <Compile Include="ViewModel\ArticleViewModel.cs" />
+    <Compile Include="ViewModel\OrderFoodViewModel.cs" />
+    <Compile Include="ViewModel\ProductsBannerViewModel.cs" />
+    <Compile Include="ViewModel\ShoppingCartEntryViewModel.cs" />
+    <Compile Include="ViewModel\ShoppingCartPageViewModel.cs" />
+    <Compile Include="View\ShoppingCartIcon.xaml.cs">
+      <DependentUpon>ShoppingCartIcon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Util\BoolToVisibilityConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -139,6 +152,15 @@
       <DependentUpon>MyOrders.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\LinqExtensions.cs" />
+    <Compile Include="ViewModel\ShoppingCartIconViewModel.cs" />
+    <Compile Include="ViewModel\NotificationBase.cs" />
+    <Compile Include="View\ProductsBanner.xaml.cs">
+      <DependentUpon>ProductsBanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShoppingCartPage.xaml.cs">
+      <DependentUpon>ShoppingCartPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -185,17 +207,25 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\ShoppingCartIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ProductsBanner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShoppingCartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.8</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

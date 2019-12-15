@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ProjectWindowsVliegtuig.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,21 +22,29 @@ namespace ProjectWindowsVliegtuig.Pages
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class OrderFood : Page
+    public sealed partial class OrderFood : Page, INotifyPropertyChanged
     {
+        internal OrderFoodViewModel ViewModel { private set; get; }
+
         public OrderFood()
         {
+            this.ViewModel = new OrderFoodViewModel();
+
             this.InitializeComponent();
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         private void Add_Product(object sender, RoutedEventArgs e)
         {
-
+            var button = (Button)sender;
+            var articleViewModel = (ArticleViewModel)button.Tag;
+            this.ViewModel.OnBuyClick(articleViewModel);
         }
 
-        private void Remove_Product(object sender, RoutedEventArgs e)
+        public void RaisePropertyChangeEvent(string propertyName)
         {
-
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }

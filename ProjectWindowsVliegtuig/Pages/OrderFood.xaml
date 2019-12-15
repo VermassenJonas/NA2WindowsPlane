@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:ProjectWindowsVliegtuig.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:ProjectWindowsVliegtuig.ViewModel"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
@@ -32,13 +33,13 @@
             x:Name="ContentGridView"
             Grid.Row="1"
             Grid.ColumnSpan="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
             AllowDrop="False"
             CanDragItems="False"
             CanReorderItems="False"
             FlowDirection="LeftToRight"
-            IsItemClickEnabled="False"
-            ItemsSource="{Binding}"
-            SelectionChanged="ContentGridView_SelectionChanged"
+            ItemsSource="{x:Bind Path=ViewModel.ProductList, Mode=OneWay}"
             SelectionMode="Single">
             <GridView.ItemTemplate>
                 <!--
@@ -51,10 +52,13 @@
                     select from the options on the right. The currently selected DataTemplate is:
                 -->
 
-                <!--  ImageTextTemplate: x:Key='ProductsTemplate' x:DataType='local:Products'  -->
+                <!--
+                    ImageTextTemplate: x:Key='ProductsTemplate'
+                    x:DataType='local:Products'
+                -->
 
-                <DataTemplate x:Uid="ProductsTemplate">
-                    <Grid Width="280" AutomationProperties.Name="{x:Bind Title}">
+                <DataTemplate x:DataType="vm:ArticleViewModel">
+                    <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="Auto" />
@@ -63,21 +67,19 @@
                             <TextBlock
                                 Margin="0,0,0,8"
                                 Style="{ThemeResource SubtitleTextBlockStyle}"
-                                Text="{x:Bind Title}" />
+                                Text="{x:Bind Path=Article.Title, Mode=OneWay}" />
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text=" Prijs: " />
-                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="{x:Bind Prijs}" />
+                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="{x:Bind Path=Article.Price, Mode=OneWay}" />
                             </StackPanel>
                         </StackPanel>
                         <StackPanel
                             Grid.Column="1"
                             Margin="8,0,8,0"
+                            VerticalAlignment="Bottom"
                             Orientation="Vertical">
-                            <Button Click="Add_Product">
+                            <Button Click="Add_Product" Tag="{x:Bind Mode=OneWay}">
                                 <FontIcon Glyph="&#xE710;" />
-                            </Button>
-                            <Button Click="Remove_Product">
-                                <FontIcon Glyph="&#xE738;" />
                             </Button>
                         </StackPanel>
                     </Grid>
