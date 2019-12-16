@@ -115,6 +115,7 @@ namespace ProjectWindowsVliegtuig.ViewModel
         {
             // await WindowsPaymentOperation.CheckoutAsync(this.ShoppingCart);
             //TODO : Wat moet er gebeuren als er op de checkout knop gedrukt wordt.
+            
         }
 
         /// <summary>

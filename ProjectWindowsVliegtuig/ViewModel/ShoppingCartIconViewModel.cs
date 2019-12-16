@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
 namespace ProjectWindowsVliegtuig.ViewModel
 {
@@ -71,13 +72,16 @@ namespace ProjectWindowsVliegtuig.ViewModel
         /// </summary>
         public void IconTapped()
         {
+            //Frame frame = MainPage.GetCurrent().Frame;
             // Nagivate to the shopping cart page (if we aren't on it already).
             if (App.AppFrame.CurrentSourcePageType == typeof(ShoppingCartPage))
+            //if (frame.CurrentSourcePageType == typeof(ShoppingCartPage))
             {
                 return;
             }
 
             App.AppFrame.Navigate(typeof(ShoppingCartPage));
+            //frame.Navigate(typeof(ShoppingCartPage));
         }
 
         /// <summary>

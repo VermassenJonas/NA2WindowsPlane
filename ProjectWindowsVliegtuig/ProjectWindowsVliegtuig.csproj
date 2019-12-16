@@ -125,6 +125,7 @@
     <Compile Include="Model\ShoppingCartChangedEventArgs.cs" />
     <Compile Include="Util\PriceStringUtilities.cs" />
     <Compile Include="ViewModel\ArticleViewModel.cs" />
+    <Compile Include="ViewModel\MyOrdersViewModel.cs" />
     <Compile Include="ViewModel\OrderFoodViewModel.cs" />
     <Compile Include="ViewModel\ProductsBannerViewModel.cs" />
     <Compile Include="ViewModel\ShoppingCartEntryViewModel.cs" />

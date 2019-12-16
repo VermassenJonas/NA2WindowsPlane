@@ -17,11 +17,13 @@
             </Grid.ColumnDefinitions>
             <TextBlock
                 Grid.Column="0"
+                Margin="10"
                 FontSize="25"
                 Tapped="LogoTapped"
                 Text="Products" />
             <local:ShoppingCartIcon
                 Grid.Column="1"
+                Margin="10"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center" />
         </Grid>

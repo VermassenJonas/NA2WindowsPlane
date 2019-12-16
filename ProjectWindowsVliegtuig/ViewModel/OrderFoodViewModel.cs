@@ -13,7 +13,16 @@ namespace ProjectWindowsVliegtuig.ViewModel
         {
             this.ShoppingCart = AppState.ShoppingCart;
             // this.ProductList = ArticleDatabase.ArticleList.Select((product) => new ArticleViewModel(product)).ToList();
+            this.ProductList = ArticleList.Select((product) => new ArticleViewModel(product)).ToList();
         }
+
+        public static readonly Article[] ArticleList = new Article[]
+        {
+            new Article("Cola", 2.00m),
+            new Article("Fanta", 2.00m),
+            new Article("Bier", 4.50m),
+            new Article("Pinda's", 1.50m)
+        };
 
         /// <summary>
         /// The list of products (as view models) to display

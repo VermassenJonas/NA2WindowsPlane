@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjectWindowsVliegtuig.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -26,10 +27,12 @@ namespace ProjectWindowsVliegtuig.Pages
     {
         //public ObservableCollection<DummyData> DummyData { get; set; } // DummyData aanpassen aan onze Order 
         //private DummyData tempSelectedItem;                            // DummyData aanpassen aan onze Order 
+        internal MyOrdersViewModel ViewModel { private set; get; }
 
         public MyOrders()
         {
             this.InitializeComponent();
+            //MyOrdersList.ItemsSource = this.ViewModel.ProductList;
             //MyOrdersList.ItemsSource = DummyData // DummyData aanpassen aan onze Order 
         }
 
