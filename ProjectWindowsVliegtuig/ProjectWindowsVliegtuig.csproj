@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Movie.cs" />
+    <Compile Include="Pages\MovieDetail.xaml.cs">
+      <DependentUpon>MovieDetail.xaml</DependentUpon>
     <Compile Include="Model\AppState.cs" />
     <Compile Include="Model\Article.cs" />
     <Compile Include="Model\ShoppingCart.cs" />
@@ -153,6 +156,8 @@
       <DependentUpon>MyOrders.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\MovieDetailVM.cs" />
+    <Compile Include="ViewModel\MoviesVM.cs" />
     <Compile Include="Util\LinqExtensions.cs" />
     <Compile Include="ViewModel\ShoppingCartIconViewModel.cs" />
     <Compile Include="ViewModel\NotificationBase.cs" />
@@ -167,9 +172,9 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="ProjectWindowsVliegtuig_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\movies\SampleVideo1.mp4" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -193,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\FlightInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MovieDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -226,7 +235,9 @@
       <Version>6.2.8</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

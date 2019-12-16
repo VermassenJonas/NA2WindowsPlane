@@ -10,10 +10,8 @@ namespace Backend.Models.Domain
     {
         [Key]
         public int MediumId { get; set; }
-        public String Type { get; set; }
-        public String Title { get; set; }
+        public string Type { get; set; }
+        public string Title { get; set; }
         public List<String> Tags { get; set; }
-        public String File { get; set; }
-        public String  Thumbnail { get; set; }
     }
 }

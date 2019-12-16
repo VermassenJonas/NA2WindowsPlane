@@ -23,6 +23,7 @@
                     <FontIcon Glyph="&#xED56;" />
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
+
             <NavigationViewItem Content="ShoppingCart" Tag="shoppingcart">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xE7BF;" />

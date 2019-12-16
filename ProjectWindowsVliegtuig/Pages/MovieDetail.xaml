@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="ProjectWindowsVliegtuig.Pages.MovieDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjectWindowsVliegtuig.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Padding="10">
+        <TextBlock Text="{x:Bind VM.Movie.Title}" FontSize="36" />
+        <TextBlock Text="{x:Bind VM.Movie.TagsToString()}" />
+        <TextBlock Text="Description:" FontSize="20" Margin="0, 20, 0, 0"/>
+        <TextBlock Text="{x:Bind VM.Movie.Description}" TextWrapping="Wrap" Padding="0, 30, 0, 0" />
+
+        <Grid>
+            <Button Content="Play Movie" Click="ShowPopupClicked"/>
+            <Popup x:Name="mediaPlayerPopup">
+                <StackPanel Height="1400" Width="1400">
+                    <MediaPlayerElement x:Name="mediaPlayer"
+                      AreTransportControlsEnabled="True"
+                      Source="ms-appx:///Assets/movies/SampleVideo1.mp4"/>
+                    <TextBlock Text="Simple Popup"/>
+                    <Button Content="Close" Click="ClosePopupClicked"/>
+                </StackPanel>
+            </Popup>
+        </Grid>
+    </StackPanel>
+</Page>
