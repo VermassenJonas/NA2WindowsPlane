@@ -35,14 +35,20 @@ namespace ProjectWindowsVliegtuig
                 case "flightinfo":
                     mainFrame.Navigate(typeof(Pages.FlightInfo));
                     break;
-                case "foodorders":
-                    mainFrame.Navigate(typeof(Pages.FoodOrders));
+                case "orderfood":
+                    mainFrame.Navigate(typeof(Pages.OrderFood));
+                    break;
+                case "myorders":
+                    mainFrame.Navigate(typeof(Pages.MyOrders));
                     break;
                 case "chatroom":
                     mainFrame.Navigate(typeof(Pages.Chatroom));
                     break;
                 case "movies":
                     mainFrame.Navigate(typeof(Pages.Movies));
+                    break;
+                case "shoppingcart":
+                    mainFrame.Navigate(typeof(View.ShoppingCartPage));
                     break;
             }
         }

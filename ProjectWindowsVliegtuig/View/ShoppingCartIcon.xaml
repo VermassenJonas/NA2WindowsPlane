@@ -1,0 +1,43 @@
+﻿<UserControl
+    x:Class="ProjectWindowsVliegtuig.View.ShoppingCartIcon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:ProjectWindowsVliegtuig.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Margin="0"
+    Padding="0"
+    d:DesignHeight="35"
+    d:DesignWidth="35"
+    Tapped="OnTapped"
+    mc:Ignorable="d">
+
+    <Canvas Width="35" Height="35">
+        <FontIcon
+            FontFamily="Segoe MDL2 Assets"
+            FontSize="35"
+            Glyph="&#xe7bf;" />
+        <Grid
+            Canvas.Left="15"
+            Canvas.Top="15"
+            Width="20"
+            Height="20"
+            Visibility="{x:Bind Path=ViewModel.ItemCountVisibility, Mode=OneWay}">
+            <Ellipse
+                Fill="#BFFFFFFF"
+                Stroke="Black"
+                StrokeThickness="0.25" />
+            <TextBlock
+                Margin="0"
+                Padding="0"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Center"
+                FontSize="10"
+                FontWeight="SemiBold"
+                LineHeight="10"
+                LineStackingStrategy="BlockLineHeight"
+                Text="{x:Bind Path=ViewModel.ItemCount, Mode=OneWay, FallbackValue='AMT'}"
+                TextAlignment="Center" />
+        </Grid>
+    </Canvas>
+</UserControl>

@@ -18,9 +18,19 @@
                 Content="Flight info"
                 Icon="World"
                 Tag="flightinfo" />
-            <NavigationViewItem Content="Food orders" Tag="foodorders">
+            <NavigationViewItem Content="Order food" Tag="orderfood">
                 <NavigationViewItem.Icon>
                     <FontIcon Glyph="&#xED56;" />
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem Content="ShoppingCart" Tag="shoppingcart">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xE7BF;" />
+                </NavigationViewItem.Icon>
+            </NavigationViewItem>
+            <NavigationViewItem Content="My orders" Tag="myorders">
+                <NavigationViewItem.Icon>
+                    <FontIcon Glyph="&#xF0E3;" />
                 </NavigationViewItem.Icon>
             </NavigationViewItem>
             <NavigationViewItem Content="Chatroom" Tag="chatroom">
