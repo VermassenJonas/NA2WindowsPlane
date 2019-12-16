@@ -1,5 +1,8 @@
-﻿using System;
+﻿using ProjectWindowsVliegtuig.Model;
+using ProjectWindowsVliegtuig.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,12 +25,24 @@ namespace ProjectWindowsVliegtuig.Pages
     /// </summary>
     public sealed partial class Chatroom : Page
     {
+        public MessageVM Messages { get; set; }
         public Chatroom()
         {
+            Messages = new MessageVM();
+            this.DataContext = Messages;
             this.InitializeComponent();
         }
-        /*
-         Zouden wij dit kunnen gebruiken? https://uwpx.org/ 
-         */
+
+        public void AddMessage()
+        {
+            Message message = new Message()
+            {
+                Alignment = "Left",
+                Content = MessageInput.Text,
+                Sender = "Jonas",
+                Sent = DateTime.Now
+            };
+            Messages.MessageList.Add(message);
+        } 
     }
 }
