@@ -47,6 +47,9 @@ namespace ProjectWindowsVliegtuig
                 case "movies":
                     mainFrame.Navigate(typeof(Pages.Movies));
                     break;
+                case "shoppingcart":
+                    mainFrame.Navigate(typeof(View.ShoppingCartPage));
+                    break;
             }
         }
     }
