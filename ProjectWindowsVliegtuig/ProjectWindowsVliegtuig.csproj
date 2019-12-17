@@ -122,6 +122,7 @@
     <Compile Include="Model\Movie.cs" />
     <Compile Include="Pages\MovieDetail.xaml.cs">
       <DependentUpon>MovieDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Model\AppState.cs" />
     <Compile Include="Model\Article.cs" />
     <Compile Include="Model\ShoppingCart.cs" />
